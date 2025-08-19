@@ -15,7 +15,7 @@ describe('Dropdown', () => {
   afterEach(() => {
     clearFixture()
   })
-  
+   // Your new test starts here
   it('should not throw error in _completeHide when _element is null', () => {
     const dropdown = new Dropdown(document.createElement('div'))
     dropdown._element = null
@@ -24,6 +24,8 @@ describe('Dropdown', () => {
     }).not.toThrow()
   })
 })
+  
+ 
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
