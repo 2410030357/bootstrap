@@ -15,6 +15,15 @@ describe('Dropdown', () => {
   afterEach(() => {
     clearFixture()
   })
+  
+  it('should not throw error in _completeHide when _element is null', () => {
+    const dropdown = new Dropdown(document.createElement('div'))
+    dropdown._element = null
+    expect(() => {
+      dropdown._completeHide()
+    }).not.toThrow()
+  })
+})
 
   describe('VERSION', () => {
     it('should return plugin version', () => {
